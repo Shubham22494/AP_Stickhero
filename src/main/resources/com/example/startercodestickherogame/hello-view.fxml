@@ -35,19 +35,17 @@
 
     <Rectangle id="stick" fx:id="stick" fill="BLACK" height="143.0" layoutX="113.0" layoutY="107.0" stroke="#200101" width="8.0" />
 
+    <Label layoutX="167.0" layoutY="14.0" />
+
+
+
+    <Label layoutX="167.0" layoutY="14.0" />
     <!-- Increase Stick Length Button -->
-    <Button alignment="CENTER" contentDisplay="TOP" defaultButton="true" layoutX="35.0" layoutY="41.0" onAction="#increaseStickLength" onDragDetected="#increaseStickLength" onDragDone="#increaseStickLength" onDragDropped="#increaseStickLength" onDragEntered="#increaseStickLength" opacity="0.0" prefHeight="206.0" prefWidth="122.0" text="INCREASE" textAlignment="CENTER" textOverrun="WORD_ELLIPSIS">
-        <font>
-            <Font size="7.0" />
-        </font></Button>
-
-    <Label layoutX="167.0" layoutY="14.0" />
+    <AnchorPane onMousePressed="#startPressTime" onMouseReleased="#stopPressTime">
+        <!-- Your other UI components go here -->
+        <Rectangle fx:id="stick" fill="BLACK" height="143.0" layoutX="113.0" layoutY="107.0" stroke="#200101" width="8.0" />
+    </AnchorPane>
 
 
-
-    <Label layoutX="167.0" layoutY="14.0" />
 
 </AnchorPane>
-
-
-

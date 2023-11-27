@@ -4,21 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cedf3a03-355f-437a-88e8-0ba382b37940" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/startercodestickherogame/StickHeroApp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/startercodestickherogame/hello-view.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/startercodestickherogame/startscreen.fxml" afterDir="false" />
+    <list default="true" id="cedf3a03-355f-437a-88e8-0ba382b37940" name="Changes" comment="hello">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/startercodestickherogame/Cherry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/startercodestickherogame/Cherry.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/startercodestickherogame/Collidable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/startercodestickherogame/Collidable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/startercodestickherogame/StickHeroApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/startercodestickherogame/StickHeroApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/startercodestickherogame/StickHeroController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/startercodestickherogame/StickHeroController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/startercodestickherogame/StickHeroGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/startercodestickherogame/StickHeroGame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/startercodestickherogame/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/startercodestickherogame/hello-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/startercodestickherogame/startscreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/startercodestickherogame/startscreen.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,21 +44,6 @@
     &quot;last_opened_file_path&quot;: &quot;C:/Users/lalit/IdeaProjects/StartercodeStickHeroGame&quot;
   }
 }</component>
-  <component name="RunManager">
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="StickHeroGame_2022189_2022494" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="StickHeroGame_2022189_2022494" />
-      <option name="filePath" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -74,6 +53,23 @@
       <option name="presentableId" value="Default" />
       <updated>1700401466823</updated>
     </task>
+    <task id="LOCAL-00001" summary="hello">
+      <option name="closed" value="true" />
+      <created>1700996586462</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1700996586462</updated>
+    </task>
+    <task id="LOCAL-00002" summary="hello">
+      <option name="closed" value="true" />
+      <created>1700996736987</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1700996736987</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -86,6 +82,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="hello" />
+    <option name="LAST_COMMIT_MESSAGE" value="hello" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

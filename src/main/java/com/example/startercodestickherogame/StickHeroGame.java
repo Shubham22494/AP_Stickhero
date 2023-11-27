@@ -30,7 +30,7 @@ public class StickHeroGame {
     }
     public void updateGame() {
         engine.updateGame();
-        controller.processInput();
+//        controller.processInput();
 
     }
     public void replay() {

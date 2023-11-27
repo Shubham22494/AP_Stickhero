@@ -30,7 +30,7 @@ public class StickHeroApp extends Application {
     public void start(Stage primarystage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(StickHeroApp.class.getResource("hello-view.fxml"));
         Parent root = fxmlLoader.load();
-        StickHeroController controller = fxmlLoader.getController(); // Corrected variable name
+        Object controller = fxmlLoader.getController(); // Corrected variable name
         Scene scene = new Scene(root);
         primarystage.setTitle("Stick Hero Game(Invisible Button to increase stick press on or above character )");
         primarystage.setScene(scene);

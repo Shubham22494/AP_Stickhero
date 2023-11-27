@@ -6,21 +6,22 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Rectangle?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="590.0" prefWidth="411.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.game.HelloController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="590.0" prefWidth="841.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.game.HelloController">
    <children>
-      <ImageView fitHeight="599.0" fitWidth="420.0" layoutX="-4.0" layoutY="-5.0">
+      <ImageView fitHeight="599.0" fitWidth="848.0" layoutX="-4.0" layoutY="-5.0">
          <image>
             <Image url="@../../../background.jpg" />
          </image>
       </ImageView>
-      <ImageView id="cartoonCharacter" fx:id="cartoonCharacter" fitHeight="104.0" fitWidth="112.0" layoutX="-25.0" layoutY="295.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView id="cartoonCharacter" fx:id="cartoonCharacter" fitHeight="104.0" fitWidth="112.0" layoutX="-19.0" layoutY="295.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../khadhkas.png" />
          </image>
       </ImageView>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" height="213.0" layoutY="381.0" opacity="0.82" stroke="BLACK" strokeType="INSIDE" width="62.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" height="213.0" layoutX="136.0" layoutY="381.0" opacity="0.82" stroke="BLACK" strokeType="INSIDE" width="70.0" />
-      <Button defaultButton="true" layoutX="99.0" layoutY="170.0" mnemonicParsing="false" onInputMethodTextChanged="#incresestick" onKeyReleased="#rotate" onMouseClicked="#incresestick" onMouseEntered="#incresestick" onMouseExited="#rotate" onMouseMoved="#incresestick" onMouseReleased="#rotate" opacity="0.52" prefHeight="152.0" prefWidth="62.0" text="increase" />
+      <Rectangle fx:id="pillar1" arcHeight="5.0" arcWidth="5.0" height="213.0" layoutY="381.0" opacity="0.82" stroke="BLACK" strokeType="INSIDE" width="62.0" />
+      <Rectangle fx:id="pillar2" arcHeight="5.0" arcWidth="5.0" height="213.0" layoutX="136.0" layoutY="381.0" opacity="0.82" stroke="BLACK" strokeType="INSIDE" width="70.0" />
+      <Button defaultButton="true" layoutX="99.0" layoutY="170.0" mnemonicParsing="false" onMousePressed="#incresestickPressed" onMouseReleased="#incresestickReleased" opacity="0.52" prefHeight="152.0" prefWidth="62.0" text="increase" />
+
       <Rectangle id="stick" fx:id="stick" arcHeight="5.0" arcWidth="5.0" height="1.0" layoutX="54.0" layoutY="380.0" opacity="0.82" stroke="BLACK" strokeType="INSIDE" width="8.0" />
    </children>
 </AnchorPane>

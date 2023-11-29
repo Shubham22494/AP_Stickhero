@@ -33,13 +33,13 @@ public class StickHeroGamePanel implements Updatable {
     public void restart() {
 
         engine.initializeGame();
-        showStartScreen();
+//        showStartScreen();
     }
 
-    public void showStartScreen() {
-
-        startScreen.show();
-    }
+//    public void showStartScreen() {
+//
+//        startScreen.show();
+//    }
 
 }
 

@@ -15,14 +15,14 @@ public class StickHeroGame {
         showStartScreen();
     }
     public void showStartScreen() {
-        StartScreen startScreen = new StartScreen(this);//aggregation/composition
-        startScreen.show();
+//        StartScreen startScreen = new StartScreen();//aggregation/composition
+//        startScreen.show();
     }
 
     public void showGameScreen() {
         // Assuming you have a GameScreen class
-        GameScreen gameScreen = new GameScreen(engine, controller);
-        gameScreen.show();
+//        GameScreen gameScreen = new GameScreen(engine, controller);
+//        gameScreen.show();
     }
     public void showGameOverScreen(int score) {
         GameOverScreen gameOverScreen = new GameOverScreen();

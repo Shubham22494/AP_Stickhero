@@ -4,48 +4,23 @@
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.shape.*?>
-<?import javafx.scene.text.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="988.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.startercodestickherogame.StickHeroController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="590.0" prefWidth="841.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.startercodestickherogame.StickHeroController">
+    <children>
+        <ImageView fitHeight="599.0" fitWidth="848.0" layoutX="-4.0" layoutY="-5.0">
+            <image>
+                <Image url="C:\Users\lalit\IdeaProjects\StartercodeStickHeroGame\src\main\resources\com\example\startercodestickherogame\background.jpg" />
+            </image>
+        </ImageView>
+        <ImageView id="cartoonCharacter" fx:id="cartoonCharacter" fitHeight="104.0" fitWidth="96.0" layoutY="309.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="C:\Users\lalit\IdeaProjects\StartercodeStickHeroGame\src\main\resources\com\example\startercodestickherogame\khadhkas.png" />
+            </image>
+        </ImageView>
+        <Rectangle fx:id="pillar1" arcHeight="5.0" arcWidth="5.0" height="213.0" layoutY="379.0" opacity="0.82" stroke="BLACK" strokeType="INSIDE" width="62.0" />
+        <Rectangle fx:id="pillar2" arcHeight="5.0" arcWidth="5.0" height="213.0" layoutX="221.0" layoutY="379.0" opacity="0.82" stroke="BLACK" strokeType="INSIDE" width="70.0" />
+        <Button defaultButton="true" layoutX="99.0" layoutY="170.0" mnemonicParsing="false" onMousePressed="#incresestickPressed" onMouseReleased="#incresestickReleased" opacity="0.52" prefHeight="152.0" prefWidth="62.0" text="increase" />
 
-    <!-- Background Image -->
-    <ImageView fitHeight="600.0" fitWidth="999.0" layoutX="-5.0">
-        <Image url="C:\Users\lalit\Downloads\19664787.jpg" />
-    </ImageView>
-
-    <!-- Your other UI components can be added here -->
-    <StackPane />
-    <Rectangle fill="BLACK" height="243.0" layoutX="276.0" layoutY="241.0" width="122.0" />
-    <Rectangle fill="BLACK" height="243.0" layoutX="775.0" layoutY="241.0" width="83.0" />
-    <Rectangle fill="BLACK" height="243.0" layoutX="567.0" layoutY="241.0" width="47.0" />
-    <Rectangle fill="BLACK" height="243.0" layoutX="49.0" layoutY="241.0" width="73.0" />
-    <Rectangle fill="RED" height="5.0" layoutX="332.0" layoutY="242.0" width="10.0" />
-    <Rectangle fill="RED" height="5.0" layoutX="813.0" layoutY="240.0" width="8.0" />
-    <Rectangle fill="RED" height="5.0" layoutX="83.0" layoutY="242.0" width="6.0" />
-    <Rectangle fill="RED" height="5.0" layoutX="589.0" layoutY="239.0" width="5.0" />
-
-    <ImageView fitHeight="39.0" fitWidth="35.0" layoutX="72.0" layoutY="200.0">
-        <Image url="C:\Users\lalit\Downloads\character2.jpg " />
-    </ImageView>
-
-
-    <ImageView fitHeight="22.0" fitWidth="35.0" layoutX="212.0" layoutY="262.0">
-        <Image url="C:\Users\lalit\Downloads\cherry4.jpg" />
-    </ImageView>
-
-    <Rectangle id="stick" fx:id="stick" fill="BLACK" height="143.0" layoutX="113.0" layoutY="107.0" stroke="#200101" width="8.0" />
-
-    <Label layoutX="167.0" layoutY="14.0" />
-
-
-
-    <Label layoutX="167.0" layoutY="14.0" />
-    <!-- Increase Stick Length Button -->
-    <AnchorPane onMousePressed="#startPressTime" onMouseReleased="#stopPressTime">
-        <!-- Your other UI components go here -->
-        <Rectangle fx:id="stick" fill="BLACK" height="143.0" layoutX="113.0" layoutY="107.0" stroke="#200101" width="8.0" />
-    </AnchorPane>
-
-
-
+        <Rectangle id="stick" fx:id="stick" arcHeight="5.0" arcWidth="5.0" height="1.0" layoutX="54.0" layoutY="380.0" opacity="0.82" stroke="BLACK" strokeType="INSIDE" width="8.0" />
+    </children>
 </AnchorPane>

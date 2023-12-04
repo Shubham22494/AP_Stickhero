@@ -9,6 +9,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.shape.Rectangle;
 import javafx.util.Duration;
+import java.util.Random;
 
 public class HelloController {
     double lenght;
@@ -18,6 +19,12 @@ public class HelloController {
     private Rectangle pillar1;
     @FXML
     private Rectangle pillar2;
+    @FXML
+    private Rectangle pillar3;
+    @FXML
+    private Rectangle pillar4;
+    @FXML
+    private Rectangle pillar5;
     @FXML
     private ImageView cartoonCharacter;
     //double ycord=stick.getTranslateY();
@@ -76,31 +83,57 @@ public class HelloController {
         addDelay(0.02); // You can adjust the duration as needed
     }
     private void reposition() {
-        double x=pillar1.getX();
-        System.out.println(x);
-        double xx=pillar2.getLayoutX();
-        System.out.println(xx);
-        pillar2.setLayoutX(x);
+        double x1 = pillar1.getLayoutX();
+        double x2 = pillar2.getLayoutX();
+        double x3 = pillar3.getLayoutX();
+        double x4 = pillar4.getLayoutX();
+        double x5 =pillar5.getLayoutX();
 
-        double y=pillar1.getLayoutY();
-        // Calculate the distance to move pillar2 back to its initial position
-        double distanceToMove =(pillar2.getLayoutX()- pillar1.getLayoutX() );
+        //pillar5.setLayoutX(x1);
 
-        // Create a TranslateTransition to move pillar2 to the position of pillar1
-        TranslateTransition translate = new TranslateTransition(Duration.seconds(1), pillar2);
-        //translate.setByX(-distanceToMove); // Move to the left (negative distance)
-        translate.setToX(x);
-        translate.setCycleCount(1);
-        translate.play();
-//        pillar2.setLayoutY(y);
-//        pillar2.setLayoutX(x);
-        // Remove pillar1 from the scene
+        double distanceToMove = (x2 - x1);
+//        TranslateTransition translate1 = new TranslateTransition(Duration.seconds(1), pillar1);
+//        translate1.setToX(-2000);
+//        translate1.setCycleCount(1);
+//        translate1.play();
         pillar1.setVisible(false);
-        pillar1.setManaged(false);
+
+        TranslateTransition translate2 = new TranslateTransition(Duration.seconds(0.5), pillar2);
+        translate2.setToX(-distanceToMove);
+        translate2.setCycleCount(1);
+        translate2.play();
+
+        TranslateTransition translate3 = new TranslateTransition(Duration.seconds(0.5), pillar3);
+        translate3.setToX(-distanceToMove);
+        translate3.setCycleCount(1);
+        translate3.play();
+
+        TranslateTransition translate4 = new TranslateTransition(Duration.seconds(0.5), pillar4);
+        translate4.setToX(-distanceToMove);
+        translate4.setCycleCount(1);
+        translate4.play();
+
+        TranslateTransition translate5 = new TranslateTransition(Duration.seconds(0.5), pillar5);
+        translate5.setToX(-distanceToMove);
+        translate5.setCycleCount(1);
+        translate5.play();
+
+        // Generate a new width for the next pillar
+        double newPillarWidth = generateRandomPillarWidth();
+        pillar4=pillar3;
+        pillar3=pillar2;
+        pillar2=pillar1;
+
+
+
+        pillar5.setWidth(newPillarWidth);
+        pillar5.setVisible(true);
+        pillar5.setTranslateX(x5);
     }
 
+
     private void animateCartoonCharacter() {
-        TranslateTransition translateTransition = new TranslateTransition(Duration.seconds(2), cartoonCharacter);
+        TranslateTransition translateTransition = new TranslateTransition(Duration.seconds(1), cartoonCharacter);
         double x=cartoonCharacter.getLayoutX();
         //System.out.println(x);
 
@@ -126,7 +159,7 @@ public class HelloController {
     }
 
     private void moveCartoonToEnd() {
-        // Calculate the distance to move the cartoon character to the end of pillar2
+
         //double distanceToMove = pillar2.getLayoutX() - pillar2.getWidth();
         double distanceToMove = stick.getHeight()-8;
         double x=cartoonCharacter.getLayoutX();
@@ -147,7 +180,7 @@ public class HelloController {
             // Rotate the stick by -90 degrees
             stick.setRotate(0);
             stick.setTranslateY(ycord);
-            stick.setTranslateX(pillar1.getLayoutX()+5);
+            stick.setTranslateX(pillar1.getLayoutX()+6);
         });
 
         // Start the translation animation
@@ -166,6 +199,10 @@ public class HelloController {
             }
         });
         delay.play();
+    }
+    private double generateRandomPillarWidth() {
+        Random random = new Random();
+        return random.nextDouble() * 50 + 50; // Random width between 50 and 100
     }
 
 }

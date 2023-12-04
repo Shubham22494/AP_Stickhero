@@ -15,8 +15,7 @@ public class StickHeroGame {
         showStartScreen();
     }
     public void showStartScreen() {
-//        StartScreen startScreen = new StartScreen();//aggregation/composition
-//        startScreen.show();
+
     }
 
     public void showGameScreen() {

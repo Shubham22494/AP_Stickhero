@@ -5,35 +5,73 @@ import javafx.animation.RotateTransition;
 import javafx.animation.TranslateTransition;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.Group;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.shape.Rectangle;
 import javafx.util.Duration;
 import java.util.Random;
 
 public class HelloController {
+    double gap;
+
     double lenght;
     @FXML
     private Rectangle stick;
-    @FXML
-    private Rectangle pillar1;
-    @FXML
-    private Rectangle pillar2;
-    @FXML
-    private Rectangle pillar3;
-    @FXML
-    private Rectangle pillar4;
-    @FXML
-    private Rectangle pillar5;
+    //@FXML
+    //private Font score;
+//    @FXML
+//    private Rectangle pillar1;
+//    @FXML
+//    private Rectangle pillar2;
+//    @FXML
+//    private Rectangle pillar3;
+//    @FXML
+//    private Rectangle pillar4;
+//    @FXML
+//    private Rectangle pillar5;
     @FXML
     private ImageView cartoonCharacter;
     //double ycord=stick.getTranslateY();
+    @FXML
+    private AnchorPane gamePane;
+
+    int pillarcount=0;
+    Rectangle[] rectangles = new Rectangle[2000];
+    public void generatePillars() {
+        //gamePane.getChildren().removeIf(node -> node instanceof Group);
+
+        // Rectangle[] rectangles = new Rectangle[2000];
+        double xPosition = 0.0;
+        double gapWidth = 250;
+        Group G1 = new Group();
+
+        for (int i = 0; i < 2000; i++) {
+            rectangles[i] = new Rectangle();
+            rectangles[i].setWidth(Math.random() * 50 + 50);
+            rectangles[i].setHeight(213);
+            rectangles[i].setLayoutY(381);
+            rectangles[i].setLayoutX(xPosition);
+
+            xPosition += gapWidth; // Adjust the gap width as needed
+            G1.getChildren().add(rectangles[i]);
+        }
+
+        // Add generated pillars to the gamePane
+        gamePane.getChildren().add(G1);
+
+
+    }
 
 
     private boolean buttonPressed = false;
-
+    protected void gapdecide(){
+        gap=136;
+    }
     @FXML
     protected void incresestickPressed(MouseEvent eve) {
+
         buttonPressed = true;
         incresestick();
     }
@@ -41,15 +79,23 @@ public class HelloController {
     @FXML
     protected void incresestickReleased(MouseEvent ee) {
         buttonPressed = false;
+        gapdecide();
         incresestick();
     }
+    private void fallDownCartoonCharacter() {
 
+        // For example, you can use a separate TranslateTransition to move the character downwards
+        TranslateTransition fallTransition = new TranslateTransition(Duration.seconds(1), cartoonCharacter);
+        fallTransition.setByY(200); // Adjust the Y distance as needed
+        fallTransition.play();
+    }
     @FXML
     protected void incresestick() {
         if (buttonPressed) {
             increaseStick();
         }
         else{
+            //stick.setLayoutY(379.0);
             rotate();
         }
     }
@@ -59,20 +105,21 @@ public class HelloController {
     }
     @FXML
     protected void rotate() {
-        resetStickTranslation();
+        //resetStickTranslation();
         stick.setRotate(0);
-        System.out.println(stick.getHeight());
-        System.out.println(stick.getTranslateX()+"    "+stick.getTranslateY());
-        stick.setTranslateY(stick.getHeight() / 2.0);
+//        System.out.println(stick.getHeight());
+//        System.out.println(stick.getTranslateX()+"    "+stick.getTranslateY());
+        stick.setTranslateY(stick.getHeight() /2.0);
         stick.setTranslateX(stick.getHeight() / 2.0);
-        System.out.println(stick.getTranslateX()+"    "+stick.getTranslateY());
-        RotateTransition rotateTransition = new RotateTransition(Duration.seconds(1), stick);
+        // System.out.println(stick.getTranslateX()+"    "+stick.getTranslateY());
+        RotateTransition rotateTransition = new RotateTransition(Duration.seconds(0.2), stick);
         rotateTransition.setByAngle(90);
         rotateTransition.play();
         animateCartoonCharacter();
     }
 
     private void increaseStick() {
+
         double currentHeight = stick.getHeight();
         double newHeight = currentHeight + 1.0;
         lenght=newHeight;
@@ -80,67 +127,32 @@ public class HelloController {
         stick.setHeight(newHeight);
 
         // Add a pause to control the speed of height increase
-        addDelay(0.02); // You can adjust the duration as needed
+        addDelay(0.001); // You can adjust the duration as needed
     }
-    private void reposition() {
-        double x1 = pillar1.getLayoutX();
-        double x2 = pillar2.getLayoutX();
-        double x3 = pillar3.getLayoutX();
-        double x4 = pillar4.getLayoutX();
-        double x5 =pillar5.getLayoutX();
+    private void reposition(){
+        double distanceToMove = -250;
+        for (Rectangle pillar : rectangles) {
+            TranslateTransition translate = new TranslateTransition(Duration.seconds(0.5), pillar);
+            translate.setByX(distanceToMove);
+            translate.setCycleCount(1);
+            translate.play();
+        }
+        pillarcount+=1;
 
-        //pillar5.setLayoutX(x1);
-
-        double distanceToMove = (x2 - x1);
-//        TranslateTransition translate1 = new TranslateTransition(Duration.seconds(1), pillar1);
-//        translate1.setToX(-2000);
-//        translate1.setCycleCount(1);
-//        translate1.play();
-        pillar1.setVisible(false);
-
-        TranslateTransition translate2 = new TranslateTransition(Duration.seconds(0.5), pillar2);
-        translate2.setToX(-distanceToMove);
-        translate2.setCycleCount(1);
-        translate2.play();
-
-        TranslateTransition translate3 = new TranslateTransition(Duration.seconds(0.5), pillar3);
-        translate3.setToX(-distanceToMove);
-        translate3.setCycleCount(1);
-        translate3.play();
-
-        TranslateTransition translate4 = new TranslateTransition(Duration.seconds(0.5), pillar4);
-        translate4.setToX(-distanceToMove);
-        translate4.setCycleCount(1);
-        translate4.play();
-
-        TranslateTransition translate5 = new TranslateTransition(Duration.seconds(0.5), pillar5);
-        translate5.setToX(-distanceToMove);
-        translate5.setCycleCount(1);
-        translate5.play();
-
-        // Generate a new width for the next pillar
-        double newPillarWidth = generateRandomPillarWidth();
-        pillar4=pillar3;
-        pillar3=pillar2;
-        pillar2=pillar1;
-
-
-
-        pillar5.setWidth(newPillarWidth);
-        pillar5.setVisible(true);
-        pillar5.setTranslateX(x5);
     }
-
-
     private void animateCartoonCharacter() {
+        //System.out.println(stick.getLayoutX());
         TranslateTransition translateTransition = new TranslateTransition(Duration.seconds(1), cartoonCharacter);
         double x=cartoonCharacter.getLayoutX();
         //System.out.println(x);
 
 
-        if (lenght < (pillar2.getLayoutX() - (pillar1.getLayoutX() + pillar1.getWidth())) || lenght>(pillar2.getLayoutX()+ pillar2.getWidth() - (pillar1.getLayoutX() + pillar1.getWidth()))) {
-            translateTransition.setByX(stick.getHeight());
-            translateTransition.setByY(200);
+        if (lenght < (rectangles[pillarcount+1].getLayoutX() - (rectangles[pillarcount].getLayoutX() + rectangles[pillarcount].getWidth())) || lenght>(rectangles[pillarcount+1].getLayoutX()+ rectangles[pillarcount+1].getWidth() - (rectangles[pillarcount].getLayoutX() + rectangles[pillarcount].getWidth()))) {
+            translateTransition.setByX(stick.getHeight()+15);
+//            translateTransition.setByY(200);
+            translateTransition.setOnFinished(event -> {
+                fallDownCartoonCharacter();
+            });
 
         } else {
             translateTransition.setByX(stick.getHeight());
@@ -156,6 +168,7 @@ public class HelloController {
 
         translateTransition.setCycleCount(1);
         translateTransition.play();
+
     }
 
     private void moveCartoonToEnd() {
@@ -167,24 +180,29 @@ public class HelloController {
 
         // Create a TranslateTransition to move the cartoon character to the end of pillar2
         TranslateTransition translate = new TranslateTransition(Duration.seconds(0.5), cartoonCharacter);
-        translate.setToX(x+pillar2.getWidth()/2-6);
+        translate.setToX(x+rectangles[pillarcount].getWidth()/2-6);
         translate.setCycleCount(1);
         double ycord=stick.getHeight();
 
         // Set an event handler to be executed after the translation is finished
         translate.setOnFinished(event -> {
             // Decrease the stick's height to zero
+            double ht=stick.getHeight();
             stick.setHeight(0);
             double xx= stick.getLayoutX();
-            System.out.println(xx);
+            //System.out.println(xx);
             // Rotate the stick by -90 degrees
             stick.setRotate(0);
-            stick.setTranslateY(ycord);
-            stick.setTranslateX(pillar1.getLayoutX()+6);
+            stick.setTranslateY(0);
+            stick.setLayoutY(379.0);
+
+            stick.setTranslateX(rectangles[0].getLayoutX()+6);
+
         });
 
         // Start the translation animation
         translate.play();
+
     }
 
 
@@ -192,9 +210,13 @@ public class HelloController {
 
 
     private void addDelay(double seconds) {
+        //System.out.println(stick.getLayoutX()+" "+stick.getLayoutY());
+
         PauseTransition delay = new PauseTransition(Duration.seconds(seconds));
+
         delay.setOnFinished(event -> {
             if (buttonPressed) {
+
                 increaseStick(); // Continue increasing only if the button is still pressed
             }
         });

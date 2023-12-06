@@ -8,12 +8,12 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class HelloApplication extends Application {
+public class Newapplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("new.fxml"));
         Parent root = fxmlLoader.load();
-        HelloController controller = fxmlLoader.getController(); // Corrected variable name
+        Newcontroller controller = fxmlLoader.getController(); // Corrected variable name
         controller.generatePillars();
         Scene scene = new Scene(root);
         stage.setTitle("Stick Hero Game(Invisible Button to increase stick press on or above character )");

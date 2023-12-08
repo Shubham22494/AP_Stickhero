@@ -13,9 +13,7 @@ public class Cherry extends Collidable {
     public void gather() {
 
     }
-    public void check(){
 
-    }
 
     @Override
     public void checkAndHandle() {

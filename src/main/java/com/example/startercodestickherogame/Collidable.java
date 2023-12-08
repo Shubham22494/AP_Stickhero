@@ -1,20 +1,11 @@
 package com.example.startercodestickherogame;
 
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
 import javafx.scene.shape.Shape;
 
 public abstract class Collidable {
     private double x;
     private double y;
     private Shape shape;
-
-    public Collidable(double x, double y, Image image) {
-    }
-
-    public Collidable() {
-
-    }
 
 //    public Collidable(double x, double y, Shape shape) {
 //        this.x = x;

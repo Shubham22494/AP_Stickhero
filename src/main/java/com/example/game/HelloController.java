@@ -6,6 +6,7 @@ import javafx.animation.TranslateTransition;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.Group;
+import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
@@ -19,6 +20,10 @@ public class HelloController {
     double lenght;
     @FXML
     private Rectangle stick;
+    @FXML
+    private Label score;
+    int currscore;
+
     //@FXML
     //private Font score;
 //    @FXML
@@ -195,13 +200,16 @@ public class HelloController {
             stick.setRotate(0);
             stick.setTranslateY(0);
             stick.setLayoutY(379.0);
-
-            stick.setTranslateX(rectangles[0].getLayoutX()+6);
+            stick.setLayoutX(0.0+rectangles[pillarcount].getWidth()/2);
+            System.out.println((-50+rectangles[pillarcount].getWidth()-10)+"  "+ (0.0+rectangles[pillarcount].getWidth()/2));
+            stick.setTranslateX(-50+rectangles[pillarcount].getWidth()-10);
 
         });
 
         // Start the translation animation
         translate.play();
+        currscore++;
+        score.setText(Integer.toString(currscore));
 
     }
 

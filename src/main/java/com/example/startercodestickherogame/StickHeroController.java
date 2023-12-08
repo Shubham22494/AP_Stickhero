@@ -108,25 +108,56 @@ public class StickHeroController {
         }
     }
     public List<Cherry> cherries = new ArrayList<>();
-    protected void generateCherries(){
-        Image cherryImage = new Image("C:\\Users\\lalit\\IdeaProjects\\StartercodeStickHeroGame\\src\\main\\resources\\com\\example\\startercodestickherogame\\cherry4.jpg");
 
+    protected void generateCherries() {
+        Image cherryImage = new Image("C:\\Users\\lalit\\IdeaProjects\\AP_Stickhero\\src\\main\\resources\\com\\example\\startercodestickherogame\\berry.png");
 
-        for(int i=2; i<rectangles.length; i+=3){
+        for (int i = 2; i < rectangles.length; i += 2) {
             double cherryX = rectangles[i].getLayoutX() + rectangles[i].getWidth() / 2;
             double cherryY = rectangles[i].getLayoutY() - 50; // Adjust the Y position as needed
 
             Cherry cherry = new Cherry(cherryX, cherryY, cherryImage);
             cherries.add(cherry);
 
-            ImageView cherryviewing = new ImageView(cherryImage);
-            cherryviewing.setX(cherryX);
-            cherryviewing.setY(cherryY);
-            // Add the cherry to the gamePane
-            gamePane.getChildren().add(cherryviewing);
+            ImageView cherryImageView = new ImageView(cherryImage);
+            cherry.setImageview(cherryImageView);
+            cherryImageView.setX(cherryX + 80);
+            cherryImageView.setY(cherryY + 60);
+            cherryImageView.setFitHeight(25);
+            cherryImageView.setFitWidth(30);
 
+            // Add the cherry to the gamePane
+            gamePane.getChildren().add(cherryImageView);
         }
     }
+
+//    public List<Cherry> cherries = new ArrayList<>();
+//    protected void generateCherries(){
+//        Group G1 = new Group();
+//        Image cherryImage = new Image("C:\\Users\\lalit\\IdeaProjects\\StartercodeStickHeroGame\\src\\main\\resources\\com\\example\\startercodestickherogame\\cherry4.jpg");
+//
+//
+//        for(int i=2; i<rectangles.length; i+=2){
+//            double cherryX = rectangles[i].getLayoutX() + rectangles[i].getWidth() /2;
+//            double cherryY = rectangles[i].getLayoutY() - 50; // Adjust the Y position as needed
+//
+//            Cherry cherry = new Cherry(cherryX, cherryY, cherryImage);
+//            cherries.add(cherry);
+//
+//            ImageView cherryviewing = new ImageView(cherryImage);
+//            cherryviewing.setX(cherryX+80);
+//            cherryviewing.setY(cherryY+60);
+//            cherryviewing.setFitHeight(25);
+//            cherryviewing.setFitWidth(30);
+//            double gapWidth = 250;
+//            cherryX += gapWidth;
+//
+//            // Add the cherry to the gamePane
+////            gamePane.getChildren().add(cherryviewing);
+//
+//            G1.getChildren().add(cherryviewing);
+//        }
+//    }
 
 
     private boolean buttonPressed = false;
@@ -202,9 +233,28 @@ public class StickHeroController {
             translate.setCycleCount(1);
             translate.play();
         }
+        for (Cherry cherry : cherries) {
+            TranslateTransition translatec = new TranslateTransition(Duration.seconds(0.5), cherry.getImageView());
+            translatec.setByX(distanceToMove);
+            translatec.setCycleCount(1);
+            translatec.play();
+        }
+
         pillarcount+=1;
 
     }
+
+
+
+//    private void transitionCherries() {
+//        double distanceToMove = -250;
+//        for (Cherry cherry : cherries) {
+//            TranslateTransition translate = new TranslateTransition(Duration.seconds(0.5), cherry.getImageView());
+//            translate.setByX(distanceToMove);
+//            translate.setCycleCount(1);
+//            translate.play();
+//        }
+//    }
     private void animateCartoonCharacter() {
         //System.out.println(stick.getLayoutX());
         TranslateTransition translateTransition = new TranslateTransition(Duration.seconds(1), cartoonCharacter);
@@ -225,7 +275,9 @@ public class StickHeroController {
             //System.out.println(xx);
 
             translateTransition.setOnFinished(event -> {
+
                 reposition();
+//                transitionCherries();
                 //cartoonCharacter.setLayoutX(x);
                 moveCartoonToEnd();
             });

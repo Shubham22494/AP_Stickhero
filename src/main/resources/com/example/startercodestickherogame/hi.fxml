@@ -34,11 +34,6 @@
             <Insets />
          </opaqueInsets>
       </Button>
-      <ImageView fitHeight="23.0" fitWidth="29.0" layoutX="176.0" layoutY="368.0">
-         <image>
-            <Image url="@cherry4.jpg" />
-         </image>
-      </ImageView>
 
             </children>
         </AnchorPane>

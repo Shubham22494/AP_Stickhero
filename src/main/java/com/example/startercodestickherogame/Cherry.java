@@ -11,6 +11,9 @@ public class Cherry extends Collidable {
     private int value;
     private ImageView imageview;
 
+//    public Cherry(double cherryX, double cherryY, Image cherryImage) {
+//    }
+
 //    public Cherry(double x, double y, int value) {
 //        super(x, y);
 //        this.value = value;
@@ -20,14 +23,27 @@ public class Cherry extends Collidable {
         super(cherryX,cherryY,cherryImage);
     }
 
-    private void initialize_cherries(){
-        Image cherryImage = new Image("");
-        imageview = new ImageView(cherryImage);
-        imageview.setX(getX());
-        imageview.setY(getY());
+//    private void initialize_cherries(){
+//        Image cherryImage = new Image("");
+//        imageview = new ImageView(cherryImage);
+//        imageview.setX(getX());
+//        imageview.setY(getY()+100);
+//
+//        imageview.setFitHeight(1);
+//
+//        imageview.setPreserveRatio(true);
+//
+//
+//    }
 
-
+    public ImageView getImageView() {
+        return imageview;
     }
+    public void setImageview(ImageView img){
+        this.imageview=img;
+    }
+
+
     ////checking
 
     public void addToPane(Pane pane){

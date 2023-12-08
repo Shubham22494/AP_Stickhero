@@ -17,10 +17,13 @@
                 <Image url="C:\Users\lalit\IdeaProjects\StartercodeStickHeroGame\src\main\resources\com\example\startercodestickherogame\khadhkas.png" />
             </image>
         </ImageView>
-        <Rectangle fx:id="pillar1" arcHeight="5.0" arcWidth="5.0" height="213.0" layoutY="379.0" opacity="0.82" stroke="BLACK" strokeType="INSIDE" width="62.0" />
-        <Rectangle fx:id="pillar2" arcHeight="5.0" arcWidth="5.0" height="213.0" layoutX="221.0" layoutY="379.0" opacity="0.82" stroke="BLACK" strokeType="INSIDE" width="70.0" />
+        <Rectangle fx:id="pillar1" arcHeight="5.0" arcWidth="5.0" height="213.0" layoutY="381.0" opacity="0.82" stroke="BLACK" strokeType="INSIDE" width="62.0" />
+        <Rectangle fx:id="pillar2" arcHeight="5.0" arcWidth="5.0" height="213.0" layoutX="136.0" layoutY="381.0" opacity="0.82" stroke="BLACK" strokeType="INSIDE" width="70.0" />
         <Button defaultButton="true" layoutX="99.0" layoutY="170.0" mnemonicParsing="false" onMousePressed="#incresestickPressed" onMouseReleased="#incresestickReleased" opacity="0.52" prefHeight="152.0" prefWidth="62.0" text="increase" />
 
         <Rectangle id="stick" fx:id="stick" arcHeight="5.0" arcWidth="5.0" height="1.0" layoutX="54.0" layoutY="380.0" opacity="0.82" stroke="BLACK" strokeType="INSIDE" width="8.0" />
+        <Rectangle fx:id="pillar3" arcHeight="5.0" arcWidth="5.0" height="213.0" layoutX="314.0" layoutY="381.0" opacity="0.82" stroke="BLACK" strokeType="INSIDE" width="39.0" />
+        <Rectangle fx:id="pillar4" arcHeight="5.0" arcWidth="5.0" height="213.0" layoutX="521.0" layoutY="381.0" opacity="0.82" stroke="BLACK" strokeType="INSIDE" width="118.0" />
+        <Rectangle fx:id="pillar5" arcHeight="5.0" arcWidth="5.0" height="213.0" layoutX="697.0" layoutY="381.0" opacity="0.82" stroke="BLACK" strokeType="INSIDE" width="39.0" />
     </children>
 </AnchorPane>

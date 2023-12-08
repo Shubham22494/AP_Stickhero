@@ -66,11 +66,11 @@ public class StartScreen extends Application {
             Parent root = loader.load();
             StickHeroController controller = loader.getController();
 //            controller.setStartScreen(this);
-            Stage stage = stickHeroApp.getPrimaryStage();
-            Scene scene = new Scene(root);
-            stage.setTitle("Tut on how to play StickHeroGame");
-            stage.setScene(scene);
-            stage.show();
+////            Stage stage = stickHeroApp.getPrimaryStage();
+//            Scene scene = new Scene(root);
+//            stage.setTitle("Tut on how to play StickHeroGame");
+//            stage.setScene(scene);
+//            stage.show();
 
         }
     }

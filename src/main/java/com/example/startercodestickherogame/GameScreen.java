@@ -32,13 +32,14 @@ package com.example.startercodestickherogame;
 //package com.example.startercodestickherogame;
 
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class GameScreen implements Updatable {
+public class GameScreen extends Node implements Updatable {
     private StickHeroApp stickHeroApp;
 
     public GameScreen(StickHeroApp stickHeroApp) {
@@ -52,9 +53,9 @@ public class GameScreen implements Updatable {
 //            GameScreenController controller = loader.getController();
 //            controller.setGameScreen(this);
 
-            Stage stage = stickHeroApp.getPrimaryStage();
-            stage.setScene(new Scene(root));
-            stage.show();
+//            Stage stage = stickHeroApp.getPrimaryStage();
+//            stage.setScene(new Scene(root));
+//            stage.show();
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -63,5 +64,10 @@ public class GameScreen implements Updatable {
     @Override
     public void updateGame() {
 
+    }
+
+    @Override
+    public Node getStyleableNode() {
+        return super.getStyleableNode();
     }
 }

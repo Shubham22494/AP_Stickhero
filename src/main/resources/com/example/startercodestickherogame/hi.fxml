@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="gamePane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="590.0" prefWidth="841.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.startercodestickherogame.StickHeroController">
+    <children>
+                <ImageView fitHeight="599.0" fitWidth="848.0" layoutX="-4.0" layoutY="-5.0">
+                    <image>
+                        <Image url="C:\Users\lalit\IdeaProjects\StartercodeStickHeroGame\src\main\resources\com\example\startercodestickherogame\background.jpg" />
+                    </image>
+                </ImageView>
+                <ImageView id="cartoonCharacter" fx:id="cartoonCharacter" fitHeight="104.0" fitWidth="112.0" layoutX="-19.0" layoutY="295.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="C:\Users\lalit\IdeaProjects\StartercodeStickHeroGame\src\main\resources\com\example\startercodestickherogame\khadhkas.png" />
+                    </image>
+                </ImageView>
+
+                <Button defaultButton="true" layoutX="4.0" layoutY="158.0" mnemonicParsing="false" onMousePressed="#incresestickPressed" onMouseReleased="#incresestickReleased" opacity="0.52" prefHeight="202.0" prefWidth="146.0" text="increase" />
+
+
+                <Rectangle id="stick" fx:id="stick" arcHeight="5.0" arcWidth="5.0" height="1.0" layoutX="54.0" layoutY="380.0" opacity="0.82" stroke="BLACK" strokeType="INSIDE" width="8.0" />
+                <Label fx:id="score" layoutX="374.0" layoutY="14.0" prefHeight="72.0" prefWidth="124.0" text="0" textFill="#6f6c6c">
+                    <font>
+                        <Font name="System Italic" size="61.0" />
+                    </font>
+                </Label>
+      <Button layoutX="161.0" layoutY="157.0" mnemonicParsing="false" onAction="#tapScreen" onMousePressed="#tapScreen" opacity="0.3" prefHeight="291.0" prefWidth="226.0" text="flip">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </Button>
+      <ImageView fitHeight="23.0" fitWidth="29.0" layoutX="176.0" layoutY="368.0">
+         <image>
+            <Image url="@cherry4.jpg" />
+         </image>
+      </ImageView>
+
+            </children>
+        </AnchorPane>

@@ -9,7 +9,7 @@ public class StickHeroEngine implements Updatable{
     private PlayerSetupScreen playerSetUpScreen;
     private int score;
     public StickHeroEngine() {
-        this.player = new Player(player.getName());
+//        this.player = new Player(player.getName());
         this.platforms = new ArrayList<>();
         this.rewards = new ArrayList<>();
         this.reviveFeature = new ReviveFeature(2);

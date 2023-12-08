@@ -1,6 +1,8 @@
 package com.example.startercodestickherogame;
 
-public class GameOverScreen {
+import javafx.scene.Node;
+
+public class GameOverScreen extends Node {
     private StickHeroGame stickHeroGame;  // Composition
     public GameOverScreen(StickHeroGame stickHeroGame) {
         this.stickHeroGame = stickHeroGame;
@@ -24,6 +26,11 @@ public class GameOverScreen {
 
     public void shareResults() {
 
+    }
+
+    @Override
+    public Node getStyleableNode() {
+        return super.getStyleableNode();
     }
 }
 

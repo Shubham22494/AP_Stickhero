@@ -5,9 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cedf3a03-355f-437a-88e8-0ba382b37940" name="Changes" comment="screens">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/startercodestickherogame/GameOverScreen.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/startercodestickherogame/GameScreen.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/startercodestickherogame/cherry4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/startercodestickherogame/hi.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/startercodestickherogame/tutScreen.fcml.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/startercodestickherogame/StickHeroGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/startercodestickherogame/StickHeroGame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/startercodestickherogame/startscreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/startercodestickherogame/startscreen.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/startercodestickherogame/Cherry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/startercodestickherogame/Cherry.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/startercodestickherogame/Collidable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/startercodestickherogame/Collidable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/startercodestickherogame/GameOverScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/startercodestickherogame/GameOverScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/startercodestickherogame/GameScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/startercodestickherogame/GameScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/startercodestickherogame/Platform.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/startercodestickherogame/Platform.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/startercodestickherogame/StartScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/startercodestickherogame/StartScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/startercodestickherogame/StickHeroApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/startercodestickherogame/StickHeroApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/startercodestickherogame/StickHeroController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/startercodestickherogame/StickHeroController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/startercodestickherogame/StickHeroEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/startercodestickherogame/StickHeroEngine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/startercodestickherogame/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/startercodestickherogame/hello-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,9 +30,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="FxmlFile" />
         <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="FxmlFile" />
       </list>
     </option>
   </component>
@@ -71,7 +84,7 @@
       <recent name="com.example.startercodestickherogame" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.StartScreen">
     <configuration name="StartScreen" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="com.example.startercodestickherogame.StickHeroApp" />
       <module name="StickHeroGame_2022189_2022494" />
@@ -160,7 +173,15 @@
       <option name="project" value="LOCAL" />
       <updated>1701345152953</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="screens">
+      <option name="closed" value="true" />
+      <created>1701687801317</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1701687801317</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -185,7 +206,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/example/startercodestickherogame/StickHeroApp.java</url>
-          <line>130</line>
+          <line>155</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>

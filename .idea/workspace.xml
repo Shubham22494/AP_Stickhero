@@ -5,22 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cedf3a03-355f-437a-88e8-0ba382b37940" name="Changes" comment="screens">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/startercodestickherogame/GameOverScreen.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/startercodestickherogame/GameScreen.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/startercodestickherogame/cherry4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/startercodestickherogame/hi.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/startercodestickherogame/tutScreen.fcml.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/startercodestickherogame/Cherry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/startercodestickherogame/Cherry.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/startercodestickherogame/Collidable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/startercodestickherogame/Collidable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/startercodestickherogame/GameOverScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/startercodestickherogame/GameOverScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/startercodestickherogame/GameScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/startercodestickherogame/GameScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/startercodestickherogame/Platform.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/startercodestickherogame/Platform.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/startercodestickherogame/StartScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/startercodestickherogame/StartScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/startercodestickherogame/StickHeroApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/startercodestickherogame/StickHeroApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/startercodestickherogame/StickHeroController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/startercodestickherogame/StickHeroController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/startercodestickherogame/StickHeroEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/startercodestickherogame/StickHeroEngine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/startercodestickherogame/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/startercodestickherogame/hello-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,22 +42,32 @@
     <setting file="file://$USER_HOME$/AppData/Local/Temp/4f4a9843-5bd6-4ef0-b042-cab99478a954_AP_Stickhero-Game.zip.954/AP_Stickhero-Game/src/main/resources/com/example/game/hello-view.fxml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/Temp/bbbb53f2-7b23-46e8-acbc-4d6ade870afb_AP_Stickhero-Game.zip.afb/AP_Stickhero-Game/src/main/java/com/example/game/HelloApplication.java" root0="FORCE_HIGHLIGHTING" />
   </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 0
+}]]></component>
   <component name="ProjectId" id="2YOfIEqU6K1ki1fEyQjJyTrC90H" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/lalit/IdeaProjects/StartercodeStickHeroGame&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/Users/lalit/IdeaProjects/StartercodeStickHeroGame",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\lalit\IdeaProjects\StartercodeStickHeroGame\src\main\resources\com\example\startercodestickherogame" />
@@ -132,6 +127,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1700401466823</updated>
+      <workItem from="1702054151771" duration="404000" />
     </task>
     <task id="LOCAL-00001" summary="hello">
       <option name="closed" value="true" />
@@ -181,8 +177,19 @@
       <option name="project" value="LOCAL" />
       <updated>1701687801317</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="screens">
+      <option name="closed" value="true" />
+      <created>1702054204799</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1702054204799</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">

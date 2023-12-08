@@ -21,16 +21,42 @@ import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 
 import java.io.IOException;
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
 
+import java.io.IOException;
+
+//public class HelloApplication extends Application {
+//    @Override
+//    public void start(Stage stage) throws IOException {
+//        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
+//        Parent root = fxmlLoader.load();
+//        HelloController controller = fxmlLoader.getController(); // Corrected variable name
+//        controller.generatePillars();
+//        Scene scene = new Scene(root);
+//        stage.setTitle("Stick Hero Game(Invisible Button to increase stick press on or above character )");
+//        stage.setScene(scene);
+//        stage.show();
+//    }
+//
+//    public static void main(String[] args) {
+//        launch();
+//    }
+//}
 import java.io.IOException;
 
 public class StickHeroApp extends Application {
     Stage stage;
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(StickHeroApp.class.getResource("hello-view.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(StickHeroApp.class.getResource("hi.fxml"));
         Parent root = fxmlLoader.load();
-        StickHeroController controller = fxmlLoader.getController(); // Corrected variable name
+        StickHeroController controller = fxmlLoader.getController();
+        controller.generatePillars();// Corrected variable name
+        controller.generateCherries();
         Scene scene = new Scene(root);
         stage.setTitle("Stick Hero Game(Invisible Button to increase stick press on or above character )");
         stage.setScene(scene);

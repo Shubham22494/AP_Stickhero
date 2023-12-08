@@ -3,12 +3,15 @@ package com.example.startercodestickherogame;
 
 import javafx.animation.*;
 import javafx.event.ActionEvent;
+import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.scene.Group;
 import javafx.scene.Parent;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.StackPane;
@@ -382,6 +385,15 @@ public class StickHeroController {
             flipCharacterDown();
         } else if(characterFlippedUp ==2){
             flipCharacterUp();
+        }
+    }
+    public void cartoonturn(KeyEvent eve){
+        if (eve.getCode() == KeyCode.F) {
+            if (characterFlippedUp == 1) {
+                flipCharacterDown();
+            } else if (characterFlippedUp == 2) {
+                flipCharacterUp();
+            }
         }
     }
 

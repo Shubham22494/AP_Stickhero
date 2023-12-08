@@ -110,7 +110,7 @@ public class StickHeroController {
     public List<Cherry> cherries = new ArrayList<>();
 
     protected void generateCherries() {
-        Image cherryImage = new Image("C:\\Users\\lalit\\IdeaProjects\\AP_Stickhero\\src\\main\\resources\\com\\example\\startercodestickherogame\\berry.png");
+        Image cherryImage = new Image("C:\\Users\\shubh\\Downloads\\2022494_Shubham_Kumar_Dwivedi\\APStick\\src\\main\\resources\\com\\example\\startercodestickherogame\\berry.png");
 
         for (int i = 2; i < rectangles.length; i += 2) {
             double cherryX = rectangles[i].getLayoutX() + rectangles[i].getWidth() / 2;
@@ -246,7 +246,7 @@ public class StickHeroController {
 
 
 
-//    private void transitionCherries() {
+    //    private void transitionCherries() {
 //        double distanceToMove = -250;
 //        for (Cherry cherry : cherries) {
 //            TranslateTransition translate = new TranslateTransition(Duration.seconds(0.5), cherry.getImageView());
@@ -452,7 +452,7 @@ public class StickHeroController {
 //            flipTransition.play();
 //        });
 
-        // Add the move up transition to the sequence
+    // Add the move up transition to the sequence
 //        sequentialTransition.getChildren().add(moveUpTransition);
 //
 //        // Play the entire sequence
@@ -1040,5 +1040,4 @@ public class StickHeroController {
 //        }
 //    }
 //}
-
 

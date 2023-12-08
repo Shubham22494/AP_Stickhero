@@ -11,12 +11,12 @@
     <children>
                 <ImageView fitHeight="599.0" fitWidth="848.0" layoutX="-4.0" layoutY="-5.0">
                     <image>
-                        <Image url="C:\Users\lalit\IdeaProjects\StartercodeStickHeroGame\src\main\resources\com\example\startercodestickherogame\background.jpg" />
+                        <Image url="C:\Users\shubh\Downloads\2022494_Shubham_Kumar_Dwivedi\APStick\src\main\resources\com\example\startercodestickherogame\background.jpg" />
                     </image>
                 </ImageView>
                 <ImageView id="cartoonCharacter" fx:id="cartoonCharacter" fitHeight="104.0" fitWidth="112.0" layoutX="-19.0" layoutY="295.0" pickOnBounds="true" preserveRatio="true">
                     <image>
-                        <Image url="C:\Users\lalit\IdeaProjects\StartercodeStickHeroGame\src\main\resources\com\example\startercodestickherogame\khadhkas.png" />
+                        <Image url="C:\Users\shubh\Downloads\2022494_Shubham_Kumar_Dwivedi\APStick\src\main\resources\com\example\startercodestickherogame\khadhkas.png" />
                     </image>
                 </ImageView>
 

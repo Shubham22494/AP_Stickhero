@@ -10,7 +10,7 @@
     <children>
         <ImageView fitHeight="728.0" fitWidth="439.0">
             <image>
-                <Image url="C:\Users\lalit\IdeaProjects\StartercodeStickHeroGame\src\main\resources\com\example\startercodestickherogame\background.jpg" />
+                <Image url="C:\Users\shubh\Downloads\2022494_Shubham_Kumar_Dwivedi\APStick\src\main\resources\com\example\startercodestickherogame\background.jpg" />
             </image>
         </ImageView>
         <Circle fill="#6f5d5d" layoutX="394.0" layoutY="657.0" opacity="0.49" radius="26.0" stroke="WHITE" strokeType="INSIDE" />
@@ -43,7 +43,7 @@
         <ImageView fitHeight="37.0" fitWidth="41.0" layoutX="298.0" layoutY="552.0" pickOnBounds="true" preserveRatio="true" />
         <ImageView fitHeight="37.0" fitWidth="41.0" layoutX="374.0" layoutY="639.0">
             <image>
-                <Image url="C:\Users\lalit\IdeaProjects\StartercodeStickHeroGame\src\main\resources\com\example\startercodestickherogame\berry.png" />
+                <Image url="C:\Users\shubh\Downloads\2022494_Shubham_Kumar_Dwivedi\APStick\src\main\resources\com\example\startercodestickherogame\berry.png" />
             </image>
         </ImageView>
         <Circle fill="#6f5d5d" layoutX="394.0" layoutY="578.0" opacity="0.49" radius="26.0" stroke="WHITE" strokeType="INSIDE" />
@@ -59,12 +59,12 @@
         <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="128.0" layoutY="166.0" pickOnBounds="true" preserveRatio="true" />
         <ImageView fitHeight="62.0" fitWidth="81.0" layoutX="354.0" layoutY="540.0">
             <image>
-                <Image url="C:\Users\lalit\IdeaProjects\StartercodeStickHeroGame\src\main\resources\com\example\startercodestickherogame\khadhkas.png" />
+                <Image url="C:\Users\shubh\Downloads\2022494_Shubham_Kumar_Dwivedi\APStick\src\main\resources\com\example\startercodestickherogame\khadhkas.png" />
             </image>
         </ImageView>
         <ImageView fitHeight="62.0" fitWidth="81.0" layoutX="7.0" layoutY="528.0">
             <image>
-                <Image url="C:\Users\lalit\IdeaProjects\StartercodeStickHeroGame\src\main\resources\com\example\startercodestickherogame\khadhkas.png" />
+                <Image url="C:\Users\shubh\Downloads\2022494_Shubham_Kumar_Dwivedi\APStick\src\main\resources\com\example\startercodestickherogame\khadhkas.png" />
             </image>
         </ImageView>
         <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="40.0" layoutY="166.0" pickOnBounds="true" preserveRatio="true" />

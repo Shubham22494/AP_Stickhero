@@ -5,9 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cedf3a03-355f-437a-88e8-0ba382b37940" name="Changes" comment="screens">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/startercodestickherogame/StickHeroApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/startercodestickherogame/StickHeroApp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/startercodestickherogame/StickHeroController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/startercodestickherogame/StickHeroController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/startercodestickherogame/hi.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/startercodestickherogame/hi.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/startercodestickherogame/startscreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/startercodestickherogame/startscreen.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,6 +133,7 @@
       <option name="presentableId" value="Default" />
       <updated>1700401466823</updated>
       <workItem from="1702054151771" duration="404000" />
+      <workItem from="1702125500779" duration="3781000" />
     </task>
     <task id="LOCAL-00001" summary="hello">
       <option name="closed" value="true" />
@@ -195,7 +199,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702078248937</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="screens">
+      <option name="closed" value="true" />
+      <created>1702079284817</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1702079284817</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

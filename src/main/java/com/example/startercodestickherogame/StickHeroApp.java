@@ -4,8 +4,10 @@ package com.example.startercodestickherogame;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.ImageCursor;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -19,8 +21,10 @@ public class StickHeroApp extends Application {
         StickHeroController controller = fxmlLoader.getController();
         controller.generatePillars();// Corrected variable name
         controller.generateCherries();
+        Image icon =new Image("C:\\Users\\shubh\\Downloads\\2022494_Shubham_Kumar_Dwivedi\\APStick\\src\\main\\resources\\com\\example\\startercodestickherogame\\khadhkas.png");
+        stage.getIcons().add(icon);
         Scene scene = new Scene(root);
-        stage.setTitle("Stick Hero Game(Invisible Button to increase stick press on or above character )");
+        stage.setTitle("Stick Hero Game");
         stage.setScene(scene);
         stage.show();
     }

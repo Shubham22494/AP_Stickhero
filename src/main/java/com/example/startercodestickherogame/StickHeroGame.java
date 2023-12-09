@@ -23,10 +23,10 @@ public class StickHeroGame {
 //        GameScreen gameScreen = new GameScreen(engine, controller);
 //        gameScreen.show();
     }
-    public void showGameOverScreen(int score) {
-        GameOverScreen gameOverScreen = new GameOverScreen();
-        gameOverScreen.displayGameOver(score);
-    }
+//    public void showGameOverScreen(int score) {
+//        GameOverScreen gameOverScreen = new GameOverScreen();
+//        gameOverScreen.displayGameOver(score);
+//    }
     public void updateGame() {
         engine.updateGame();
 //        controller.processInput();

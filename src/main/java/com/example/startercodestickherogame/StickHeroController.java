@@ -5,8 +5,10 @@ import javafx.animation.*;
 import javafx.event.ActionEvent;
 import javafx.event.Event;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.Group;
 import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -31,6 +33,8 @@ public class StickHeroController {
     StartScreen startscreen;
     GameOverScreen gameoverscreen;
     private int cherriesDisappearedCount = 0;
+//    @FXML
+//    private Label finalscore;
     @FXML
     private  Label cherrycount;
     double lenght;
@@ -66,9 +70,7 @@ public class StickHeroController {
     Rectangle[] rectangles = new Rectangle[2000];
     private Platform[] platforms = new Platform[2000];
     public void generatePillars() {
-        //gamePane.getChildren().removeIf(node -> node instanceof Group);
 
-        // Rectangle[] rectangles = new Rectangle[2000];
         double xPosition = 0.0;
         double gapWidth = 250;
         Group G1 = new Group();
@@ -80,11 +82,11 @@ public class StickHeroController {
             rectangles[i].setLayoutY(381);
             rectangles[i].setLayoutX(xPosition);
 
-            xPosition += gapWidth; // Adjust the gap width as needed
+            xPosition += gapWidth;
             G1.getChildren().add(rectangles[i]);
         }
 
-        // Add generated pillars to the
+
         try {
             gamePane.getChildren().add(G1);
         }catch(Exception e){
@@ -272,6 +274,7 @@ public class StickHeroController {
 //            translateTransition.setByY(200);
             translateTransition.setOnFinished(event -> {
                 fallDownCartoonCharacter();
+                //switchToGameOverScreen();
             });
 
         } else {
@@ -297,12 +300,15 @@ public class StickHeroController {
 //        System.out.println(cartoonCharacter.getBoundsInParent());
 //        System.out.println(cherries.get(cherriesDisappearedCount).getImageView().getBoundsInParent());
 
-            if (cartoonCharacter.getBoundsInParent().intersects(cherries.get(cherriesDisappearedCount).getImageView().getBoundsInParent())) {
-                cherries.get(cherriesDisappearedCount).getImageView().setVisible(false);
-                cherriesDisappearedCount++;
-                cherrycount.setText(Integer.toString(cherriesDisappearedCount));
-                //System.out.println(cherriesDisappearedCount);
-            }
+        if (cartoonCharacter.getBoundsInParent().intersects(cherries.get(cherriesDisappearedCount).getImageView().getBoundsInParent())) {
+            cherries.get(cherriesDisappearedCount).getImageView().setVisible(false);
+            cherriesDisappearedCount++;
+            cherrycount.setText(Integer.toString(cherriesDisappearedCount));
+            currscore++;
+            //finalscore.setText(Integer.toString(currscore));
+            score.setText(Integer.toString(currscore));
+            //System.out.println(cherriesDisappearedCount);
+        }
 
     }
 
@@ -339,6 +345,7 @@ public class StickHeroController {
         translate.play();
         currscore++;
         score.setText(Integer.toString(currscore));
+        //finalscore.setText(Integer.toString(currscore));
 
     }
 
@@ -387,8 +394,10 @@ public class StickHeroController {
     public void switchToGameOverScreen() {
         try {
 //            Parent gameOverScreen = ;
-            rootPane.getChildren().clear();
-            rootPane.getChildren().add(gameoverscreen);
+//            rootPane.getChildren().clear();
+//            rootPane.getChildren().add(gameoverscreen);
+            gameoverscreen=new GameOverScreen(currscore);
+            gameoverscreen.display();
         } catch (Exception e) {
             e.printStackTrace();
         }

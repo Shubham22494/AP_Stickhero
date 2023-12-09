@@ -21,7 +21,7 @@ public class StickHeroApp extends Application {
         StickHeroController controller = fxmlLoader.getController();
         controller.generatePillars();// Corrected variable name
         controller.generateCherries();
-        Image icon =new Image("C:\\Users\\shubh\\Downloads\\2022494_Shubham_Kumar_Dwivedi\\APStick\\src\\main\\resources\\com\\example\\startercodestickherogame\\khadhkas.png");
+        Image icon =new Image("C:\\Users\\shubh\\Downloads\\2022494_Shubham_Kumar_Dwivedi\\APStick\\src\\main\\resources\\com\\example\\startercodestickherogame\\cartoonicon.png");
         stage.getIcons().add(icon);
         Scene scene = new Scene(root);
         stage.setTitle("Stick Hero Game");

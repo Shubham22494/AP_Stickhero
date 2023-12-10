@@ -5,18 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cedf3a03-355f-437a-88e8-0ba382b37940" name="Changes" comment="screens">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/startercodestickherogame/cartoonicon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/startercodestickherogame/home-removebg-preview.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/startercodestickherogame/img.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/startercodestickherogame/ranking.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/startercodestickherogame/restart.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/startercodestickherogame/star.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/startercodestickherogame/Scores" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/startercodestickherogame/playbutton-removebg-preview.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/startercodestickherogame/revive.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/startercodestickherogame/PlayerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/startercodestickherogame/Cherry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/startercodestickherogame/Cherry.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/startercodestickherogame/GameOverScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/startercodestickherogame/GameOverScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/startercodestickherogame/GameScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/startercodestickherogame/GameScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/startercodestickherogame/Platform.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/startercodestickherogame/Platform.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/startercodestickherogame/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/startercodestickherogame/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/startercodestickherogame/Reward.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/startercodestickherogame/Reward.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/startercodestickherogame/StartScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/startercodestickherogame/StartScreen.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/startercodestickherogame/StickHeroApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/startercodestickherogame/StickHeroApp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/startercodestickherogame/StickHeroController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/startercodestickherogame/StickHeroController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/startercodestickherogame/StickHeroGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/startercodestickherogame/StickHeroGame.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/startercodestickherogame/GameOverScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/startercodestickherogame/GameOverScreen.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/startercodestickherogame/startscreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/startercodestickherogame/startscreen.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,9 +30,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JUnit5 Test Class" />
         <option value="FxmlFile" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -94,7 +98,7 @@
       <recent name="com.example.startercodestickherogame" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.StartScreen">
+  <component name="RunManager" selected="JUnit.StickHeroControllerTest2">
     <configuration name="StartScreen" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="com.example.startercodestickherogame.StickHeroApp" />
       <module name="StickHeroGame_2022189_2022494" />
@@ -108,7 +112,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="lettergradeTest.testing" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PlayerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="StickHeroGame_2022189_2022494" />
       <extension name="coverage">
         <pattern>
@@ -117,8 +121,69 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.example.startercodestickherogame" />
-      <option name="MAIN_CLASS_NAME" value="com.example.startercodestickherogame.lettergradeTest" />
-      <option name="METHOD_NAME" value="testing" />
+      <option name="MAIN_CLASS_NAME" value="com.example.startercodestickherogame.PlayerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PlayerTest.testIsAliveReturnsTrueInitially" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="StickHeroGame_2022189_2022494" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.startercodestickherogame.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.startercodestickherogame" />
+      <option name="MAIN_CLASS_NAME" value="com.example.startercodestickherogame.PlayerTest" />
+      <option name="METHOD_NAME" value="testIsAliveReturnsTrueInitially" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StickHeroControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="StickHeroGame_2022189_2022494" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.startercodestickherogame.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.startercodestickherogame" />
+      <option name="MAIN_CLASS_NAME" value="com.example.startercodestickherogame.StickHeroControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StickHeroControllerTest2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="StickHeroGame_2022189_2022494" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.startercodestickherogame.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.startercodestickherogame" />
+      <option name="MAIN_CLASS_NAME" value="com.example.startercodestickherogame.StickHeroControllerTest2" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StickHeroControllerTest.fliptestUP" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="StickHeroGame_2022189_2022494" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.startercodestickherogame.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.startercodestickherogame" />
+      <option name="MAIN_CLASS_NAME" value="com.example.startercodestickherogame.StickHeroControllerTest" />
+      <option name="METHOD_NAME" value="fliptestUP" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -126,11 +191,19 @@
     </configuration>
     <list>
       <item itemvalue="Application.StartScreen" />
-      <item itemvalue="JUnit.lettergradeTest.testing" />
+      <item itemvalue="JUnit.PlayerTest" />
+      <item itemvalue="JUnit.PlayerTest.testIsAliveReturnsTrueInitially" />
+      <item itemvalue="JUnit.StickHeroControllerTest" />
+      <item itemvalue="JUnit.StickHeroControllerTest.fliptestUP" />
+      <item itemvalue="JUnit.StickHeroControllerTest2" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.lettergradeTest.testing" />
+        <item itemvalue="JUnit.StickHeroControllerTest2" />
+        <item itemvalue="JUnit.StickHeroControllerTest" />
+        <item itemvalue="JUnit.StickHeroControllerTest.fliptestUP" />
+        <item itemvalue="JUnit.PlayerTest" />
+        <item itemvalue="JUnit.PlayerTest.testIsAliveReturnsTrueInitially" />
       </list>
     </recent_temporary>
   </component>
@@ -143,7 +216,7 @@
       <option name="presentableId" value="Default" />
       <updated>1700401466823</updated>
       <workItem from="1702054151771" duration="404000" />
-      <workItem from="1702125500779" duration="11020000" />
+      <workItem from="1702125500779" duration="35660000" />
     </task>
     <task id="LOCAL-00001" summary="hello">
       <option name="closed" value="true" />
@@ -225,7 +298,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702129497325</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="screens">
+      <option name="closed" value="true" />
+      <created>1702138693759</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1702138693759</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

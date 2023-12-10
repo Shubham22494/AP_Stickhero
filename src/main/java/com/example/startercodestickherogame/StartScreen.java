@@ -5,99 +5,79 @@ package com.example.startercodestickherogame;
 // StartScreen.java
 //package com.example.startercodestickherogame;
 
-import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class StartScreen extends Application {
+
+class StartScreen {
+
     private StickHeroApp stickHeroApp;
 
-//    public StartScreen(StickHeroApp stickHeroApp) {
-//        this.stickHeroApp = stickHeroApp;
-//    }
-
-    public static void main(String[] args) {
-        launch();
+    public void setPrimaryStage(Stage primaryStage) {
+        this.primaryStage = primaryStage;
     }
 
-//    public void show(){}
-    @Override
-    public void start(Stage stage) {
+    private Stage primaryStage;
+
+    public StartScreen(StickHeroApp stickHeroApp) {
+//            this.stickHeroApp = stickHeroApp;
+        this.primaryStage = new Stage();
+    }
+
+    public void show() {
         try {
+            showTutorial();
             FXMLLoader loader = new FXMLLoader(getClass().getResource("startscreen.fxml"));
             Parent root = loader.load();
             StickHeroController controller = loader.getController();
-//            controller.setStartScreen(this);
-//            Stage stage = stickHeroApp.getPrimaryStage();
-            Scene scene = new Scene(root);
-            stage.setTitle("Start Screen For StickHeroGame");
-            stage.setScene(scene);
-            stage.show();
+            //controller.setStartScreen(this);
 
-//            Stage stage = stickHeroApp.getPrimaryStage();
-//            stage.setScene(new Scene(root));
-//            stage.show();
+            Scene scene = new Scene(root);
+            primaryStage.setTitle("StickHeroGame");
+            Image icon =new Image("C:\\Users\\shubh\\Downloads\\2022494_Shubham_Kumar_Dwivedi\\APStick\\src\\main\\resources\\com\\example\\startercodestickherogame\\cartoonicon.png");
+            primaryStage.getIcons().add(icon);
+            primaryStage.setScene(scene);
+            primaryStage.show();
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
-//    public void playAsDefaultPlayer() {
-//        showPlayerSetupScreen(null);
-//    }
+//        public void playWithPlayerName() {
+//            // Implement logic to start the game with a specific player name.
+//        }
 
-    public void playWithPlayerName() {
-//        showPlayerSetupScreen(new Player());
+    public void showTutorial() {
+        System.out.println("Stick Hero Game Quick Guide:\n" +
+                "1. Start Game:\n" +
+                "\n" +
+                "Launch the Stick Hero game and select \"Play\" on the Start Screen.\n" +
+                "2. Gameplay Basics:\n" +
+                "\n" +
+                "Control a character with a stick.\n" +
+                " click for  extending the stick.\n" +
+                "3. Cross Platforms:\n" +
+                "\n" +
+                "Navigate platforms with gaps.\n" +
+                "Adjust stick length to cross safely.\n" +
+                "4. Score Points:\n" +
+                "\n" +
+                "Collect cherries for extra points.\n" +
+                "Score based on successful crossings.\n" +
+                "5. Game Over and Restart:\n" +
+                "\n" +
+                "Falling ends the game.\n" +
+                "View Game Over screen for score.\n" +
+                "Choose to restart or return to the main menu.");
+
     }
 
-//    private void showPlayerSetupScreen(Player player) {
-////        PlayerSetupScreen playerSetupScreen = new PlayerSetupScreen(stickHeroApp, player);
-////        playerSetupScreen.displaySetupScreen();
-//    }
-
-    class Tutorial{
-        public void Tutorial() throws IOException {
-            System.out.println("Instructions on how to play this Game");
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("startscreen_tut.fxml"));
-            Parent root = loader.load();
-            StickHeroController controller = loader.getController();
-//            controller.setStartScreen(this);
-////            Stage stage = stickHeroApp.getPrimaryStage();
-//            Scene scene = new Scene(root);
-//            stage.setTitle("Tut on how to play StickHeroGame");
-//            stage.setScene(scene);
-//            stage.show();
-
-        }
+    public Stage getPrimaryStage() {
+        return primaryStage;
     }
 }
-
-//public class StartScreen {
-//    private StickHeroGame game; //composition
-//
-//    public StartScreen(StickHeroGame game) {
-//        this.game = game;
-//    }
-//
-//
-//
-//    public void show() {
-//
-//        game.showGameScreen();
-//    }
-//
-//    public void startButtonClicked() {
-//
-//    }
-//
-//   //ineer class
-//    class Tutorial {
-//        public void specificLogic() {
-//
-//        }
-//    }
-//}

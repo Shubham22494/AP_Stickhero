@@ -3,6 +3,18 @@ package com.example.startercodestickherogame;
 import javafx.scene.shape.Rectangle;
 
 public class Platform {
+    public void setWidth(double width) {
+        this.width = width;
+    }
+
+    public void setHeight(double height) {
+        this.height = height;
+    }
+
+    public void setRectangle(Rectangle rectangle) {
+        this.rectangle = rectangle;
+    }
+
     private double width;
     private double height;
     private Rectangle rectangle;

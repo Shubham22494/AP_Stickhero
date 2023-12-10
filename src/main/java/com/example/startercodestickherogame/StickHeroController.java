@@ -21,11 +21,54 @@ import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 
+import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
 public class StickHeroController {
+
+
+    private List<Integer> scores = new ArrayList<>();
+//    private int curr = 0;
+
+    public void updateScore(int score) {
+        currscore = score;
+        scores.add(currscore);
+    }
+
+    // Method to get the current score
+    public int getCurrentScore() {
+        return currscore;
+    }
+
+    public int getBestScore() {
+        //System.out.println(getCurrentScore());
+        int bestScore = 5;
+        for (int score : scores) {
+            if (score > bestScore) {
+                bestScore = score;
+            }
+        }
+        return bestScore;
+    }
+    public void setscore(){
+        score.setText(Integer.toString(2));
+    }
+
+    public void getBestScore2(){
+        //System.out.println(getCurrentScore());
+        int bestScore=0;
+        for (int score : scores) {
+            if (score > bestScore) {
+                bestScore = score;
+            }
+        }
+        //System.out.println(bestScore);
+
+    }
+
+
 
     private int characterFlippedUp = 1;
     double gap;
@@ -37,35 +80,208 @@ public class StickHeroController {
 //    private Label finalscore;
     @FXML
     private  Label cherrycount;
+    public int scored;
     double lenght;
     @FXML
     private Rectangle stick;
     @FXML
     private Label score;
     int currscore;
+//    @FXML
+//    private Label gamescore;
     @FXML
     private StackPane rootPane;
 
     private Stage primaryStage;
 
-    //@FXML
-    //private Font score;
-//    @FXML
-//    private Rectangle pillar1;
-//    @FXML
-//    private Rectangle pillar2;
-//    @FXML
-//    private Rectangle pillar3;
-//    @FXML
-//    private Rectangle pillar4;
-//    @FXML
-//    private Rectangle pillar5;
     @FXML
     private ImageView cartoonCharacter;
-    //double ycord=stick.getTranslateY();
+
     @FXML
     private AnchorPane gamePane;
 
+    public List<Integer> getScores() {
+        return scores;
+    }
+
+    public void setScores(List<Integer> scores) {
+        this.scores = scores;
+    }
+
+    public double getGap() {
+        return gap;
+    }
+
+    public void setGap(double gap) {
+        this.gap = gap;
+    }
+
+    public GameScreen getGamescreen() {
+        return gamescreen;
+    }
+
+    public void setGamescreen(GameScreen gamescreen) {
+        this.gamescreen = gamescreen;
+    }
+
+    public StartScreen getStartscreen() {
+        return startscreen;
+    }
+
+    public void setStartscreen(StartScreen startscreen) {
+        this.startscreen = startscreen;
+    }
+
+    public GameOverScreen getGameoverscreen() {
+        return gameoverscreen;
+    }
+
+    public void setGameoverscreen(GameOverScreen gameoverscreen) {
+        this.gameoverscreen = gameoverscreen;
+    }
+
+    public int getCherriesDisappearedCount() {
+        return cherriesDisappearedCount;
+    }
+
+    public void setCherriesDisappearedCount(int cherriesDisappearedCount) {
+        this.cherriesDisappearedCount = cherriesDisappearedCount;
+    }
+
+    public Label getCherrycount() {
+        return cherrycount;
+    }
+
+    public void setCherrycount(Label cherrycount) {
+        this.cherrycount = cherrycount;
+    }
+
+    public int getScored() {
+        return scored;
+    }
+
+    public void setScored(int scored) {
+        this.scored = scored;
+    }
+
+    public double getLenght() {
+        return lenght;
+    }
+
+    public void setLenght(double lenght) {
+        this.lenght = lenght;
+    }
+
+    public Rectangle getStick() {
+        return stick;
+    }
+
+    public void setStick(Rectangle stick) {
+        this.stick = stick;
+    }
+
+    public void setScore(Label score) {
+        this.score = score;
+    }
+
+    public int getCurrscore() {
+        return currscore;
+    }
+
+    public void setCurrscore(int currscore) {
+        this.currscore = currscore;
+    }
+
+    public StackPane getRootPane() {
+        return rootPane;
+    }
+
+    public void setRootPane(StackPane rootPane) {
+        this.rootPane = rootPane;
+    }
+
+    public Stage getPrimaryStage() {
+        return primaryStage;
+    }
+
+    public void setPrimaryStage(Stage primaryStage) {
+        this.primaryStage = primaryStage;
+    }
+
+    public ImageView getCartoonCharacter() {
+        return cartoonCharacter;
+    }
+
+    public void setCartoonCharacter(ImageView cartoonCharacter) {
+        this.cartoonCharacter = cartoonCharacter;
+    }
+
+    public AnchorPane getGamePane() {
+        return gamePane;
+    }
+
+    public void setGamePane(AnchorPane gamePane) {
+        this.gamePane = gamePane;
+    }
+
+    public int getPillarcount() {
+        return pillarcount;
+    }
+
+    public void setPillarcount(int pillarcount) {
+        this.pillarcount = pillarcount;
+    }
+
+    public Rectangle[] getRectangles() {
+        return rectangles;
+    }
+
+    public void setRectangles(Rectangle[] rectangles) {
+        this.rectangles = rectangles;
+    }
+
+    public Platform[] getPlatforms() {
+        return platforms;
+    }
+
+    public void setPlatforms(Platform[] platforms) {
+        this.platforms = platforms;
+    }
+
+    public Label getGamescore() {
+        return gamescore;
+    }
+
+    public void setGamescore(Label gamescore) {
+        this.gamescore = gamescore;
+    }
+
+    public Label getGamee() {
+        return gamee;
+    }
+
+    public void setGamee(Label gamee) {
+        this.gamee = gamee;
+    }
+
+    public List<Cherry> getCherries() {
+        return cherries;
+    }
+
+    public void setCherries(List<Cherry> cherries) {
+        this.cherries = cherries;
+    }
+
+    public StickHeroApp getStickHeroApp() {
+        return stickHeroApp;
+    }
+
+    public void setStickHeroApp(StickHeroApp stickHeroApp) {
+        this.stickHeroApp = stickHeroApp;
+    }
+
+    //    @FXML
+//    private Label finals;
     int pillarcount=0;
     Rectangle[] rectangles = new Rectangle[2000];
     private Platform[] platforms = new Platform[2000];
@@ -96,6 +312,9 @@ public class StickHeroController {
 
 
     }
+
+    public Label gamescore;
+    public Label gamee;
 
 
     public void generatePillars2() {
@@ -138,34 +357,14 @@ public class StickHeroController {
         }
     }
 
-//    public List<Cherry> cherries = new ArrayList<>();
-//    protected void generateCherries(){
-//        Group G1 = new Group();
-//        Image cherryImage = new Image("C:\\Users\\lalit\\IdeaProjects\\StartercodeStickHeroGame\\src\\main\\resources\\com\\example\\startercodestickherogame\\cherry4.jpg");
-//
-//
-//        for(int i=2; i<rectangles.length; i+=2){
-//            double cherryX = rectangles[i].getLayoutX() + rectangles[i].getWidth() /2;
-//            double cherryY = rectangles[i].getLayoutY() - 50; // Adjust the Y position as needed
-//
-//            Cherry cherry = new Cherry(cherryX, cherryY, cherryImage);
-//            cherries.add(cherry);
-//
-//            ImageView cherryviewing = new ImageView(cherryImage);
-//            cherryviewing.setX(cherryX+80);
-//            cherryviewing.setY(cherryY+60);
-//            cherryviewing.setFitHeight(25);
-//            cherryviewing.setFitWidth(30);
-//            double gapWidth = 250;
-//            cherryX += gapWidth;
-//
-//            // Add the cherry to the gamePane
-////            gamePane.getChildren().add(cherryviewing);
-//
-//            G1.getChildren().add(cherryviewing);
-//        }
-//    }
 
+    public boolean isButtonPressed() {
+        return buttonPressed;
+    }
+
+    public void setButtonPressed(boolean buttonPressed) {
+        this.buttonPressed = buttonPressed;
+    }
 
     private boolean buttonPressed = false;
     protected void gapdecide(){
@@ -178,6 +377,77 @@ public class StickHeroController {
         buttonPressed = true;
         incresestick();
     }
+    StickHeroApp stickHeroApp;
+    @FXML
+    private void switchToGameScreen(ActionEvent event) throws Exception {
+        getBestScore2();
+        // Load the FXML file for the game screen
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("hi.fxml"));
+        Parent gameScreenRoot = loader.load();
+
+        GameScreen gameScreen = new GameScreen(stickHeroApp);
+        Stage stage = (Stage) ((javafx.scene.Node) event.getSource()).getScene().getWindow();
+        gameScreen.show(stage);
+    }
+
+    @FXML
+    private void revive(ActionEvent eve) throws Exception {                             ////Considering the minimum amount of cherry required is 2 and the game will start from zero zero scores if the revive condition met
+        //System.out.println(cherriesDisappearedCount);
+        List<Integer> scoreList = new ArrayList<>();
+        try (BufferedReader reader = new BufferedReader(new FileReader("C:\\Users\\shubh\\Downloads\\2022494_Shubham_Kumar_Dwivedi\\APStick\\src\\main\\java\\com\\example\\startercodestickherogame\\Scores"))) {
+            String line;
+
+            while ((line = reader.readLine()) != null) {
+
+                scored = Integer.parseInt(line);
+                scoreList.add(scored);
+//                System.out.println(scored);
+//                scoreList.add(score);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        if(scoreList.get(scoreList.size() - 1) >2){
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("hi.fxml"));
+            Parent gameScreenRoot = loader.load();
+            StickHeroController control=loader.getController();
+            control.setscore();
+            //control.cherrycount.setText(Integer.toString(5));
+
+            GameScreen gameScreen = new GameScreen(stickHeroApp);
+            Stage stage = (Stage) ((javafx.scene.Node) eve.getSource()).getScene().getWindow();
+            gameScreen.show(stage);
+
+        }
+        else{
+            System.out.println("Cannot Be revived cherry is insufficient!!!!");
+        }
+
+    }
+    private void switchToGameOverScreen() throws Exception {
+        getBestScore2();
+        try {
+            //gamee.setText("5");
+            GameOverScreen gameoverscr = new GameOverScreen(stickHeroApp);
+            Stage stage = (Stage) gamePane.getScene().getWindow();
+            gameoverscr.show(stage);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        //System.out.println(getScore());
+    }
+    @FXML
+    private void switchToStartScreen(ActionEvent event) throws Exception {
+        // Load the FXML file for the start screen
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("StartScreen.fxml"));
+        Parent startScreenRoot = loader.load();
+
+        StartScreen startScreen = new StartScreen(stickHeroApp);
+        Stage stage = (Stage) ((javafx.scene.Node) event.getSource()).getScene().getWindow();
+        startScreen.show();
+    }
+
+
 
     @FXML
     protected void incresestickReleased(MouseEvent ee) {
@@ -274,8 +544,40 @@ public class StickHeroController {
 //            translateTransition.setByY(200);
             translateTransition.setOnFinished(event -> {
                 fallDownCartoonCharacter();
-                //switchToGameOverScreen();
+                try (BufferedWriter writer = new BufferedWriter(new FileWriter("C:\\Users\\shubh\\Downloads\\2022494_Shubham_Kumar_Dwivedi\\APStick\\src\\main\\java\\com\\example\\startercodestickherogame\\Scores", true))) {
+                    // Append each score to the file
+
+                        writer.write(Integer.toString(cherriesDisappearedCount));
+                        writer.newLine();
+
+
+                    //System.out.println("Scores have been written to the file.");
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+                try (BufferedWriter writer = new BufferedWriter(new FileWriter("C:\\Users\\shubh\\Downloads\\2022494_Shubham_Kumar_Dwivedi\\APStick\\src\\main\\java\\com\\example\\startercodestickherogame\\Final", true))) {
+                    // Append each score to the file
+
+                    writer.write(Integer.toString(currscore));
+                    writer.newLine();
+
+
+                    //System.out.println("Scores have been written to the file.");
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+
+                PauseTransition pauseTransition = new PauseTransition(Duration.seconds(1));
+                pauseTransition.setOnFinished(pauseEvent -> {
+                    try {
+                        switchToGameOverScreen();
+                    } catch (Exception e) {
+                        throw new RuntimeException(e);
+                    }
+                });
+                pauseTransition.play();
             });
+
 
         } else {
             translateTransition.setByX(stick.getHeight());
@@ -296,7 +598,7 @@ public class StickHeroController {
         translateTransition.play();
 
     }
-    private void checkCherryCollision() {
+    public void checkCherryCollision() {
 //        System.out.println(cartoonCharacter.getBoundsInParent());
 //        System.out.println(cherries.get(cherriesDisappearedCount).getImageView().getBoundsInParent());
 
@@ -345,6 +647,7 @@ public class StickHeroController {
         translate.play();
         currscore++;
         score.setText(Integer.toString(currscore));
+        //gamescore.setText(Integer.toString(currscore));
         //finalscore.setText(Integer.toString(currscore));
 
     }
@@ -371,37 +674,29 @@ public class StickHeroController {
         return random.nextDouble() * 50 + 50; // Random width between 50 and 100
     }
 
-    public void switchToStartScreen() {
-        try {
-            StartScreen startScreen = startscreen;
-            rootPane.getChildren().clear();
-//            rootPane.getChildren().add(startScreen);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
-    public void switchToGameScreen() {
-        try {
-            GameScreen GameScreen = gamescreen;
-            rootPane.getChildren().clear();
-            rootPane.getChildren().add(GameScreen);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
-    public void switchToGameOverScreen() {
-        try {
-//            Parent gameOverScreen = ;
+//    public void switchToStartScreen() {
+//        try {
+//            StartScreen startScreen = startscreen;
 //            rootPane.getChildren().clear();
-//            rootPane.getChildren().add(gameoverscreen);
-            gameoverscreen=new GameOverScreen(currscore);
-            gameoverscreen.display();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
+////            rootPane.getChildren().add(startScreen);
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
+//    }
+//    public void setStartScreen(StartScreen scrn){
+//
+//    }
+//    public void switchToGameScreen() {
+//        try {
+//            GameScreen GameScreen = gamescreen;
+//            rootPane.getChildren().clear();
+//            rootPane.getChildren().add(GameScreen);
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
+//    }
+
+
 
     @FXML
     protected void tapScreen(MouseEvent event) {
@@ -436,67 +731,16 @@ public class StickHeroController {
         characterFlippedUp = 2;
     }
 
-//    private void flipCharacterDown() {
-//        // Create a sequential transition to perform the two animations in sequence
-//        SequentialTransition sequentialTransition = new SequentialTransition();
-//
-//        // First, add a translation to move down by 10 units
-//        TranslateTransition moveDownTransition = new TranslateTransition(Duration.seconds(0.2), cartoonCharacter);
-//        moveDownTransition.setByY(50);
-//
-//        // Set an event handler to be executed after the translation is finished
-//        moveDownTransition.setOnFinished(event -> {
-//            // Second, add the scale transition to flip vertically
-//            ScaleTransition flipTransition = new ScaleTransition(Duration.seconds(0.3), cartoonCharacter);
-//            flipTransition.setToY(-1); // Flip vertically
-//
-//            // Set an event handler to be executed after the flip is finished
-//            flipTransition.setOnFinished(flipEvent -> {
-//                // Update the character state
-//                characterFlippedUp = 2;
-//            });
-//
-//            // Play the flip transition
-//            flipTransition.play();
-//        });
-//
-//        // Add the move down transition to the sequence
-//        sequentialTransition.getChildren().add(moveDownTransition);
-//
-//        // Play the entire sequence
-//        sequentialTransition.play();
-//    }
-//    private void flipCharacterUp() {
-//        // Create a sequential transition to perform the two animations in sequence
-//        SequentialTransition sequentialTransition = new SequentialTransition();
-//
-//        // First, add a translation to move up by 10 units
-//        TranslateTransition moveUpTransition = new TranslateTransition(Duration.seconds(0.2), cartoonCharacter);
-//        moveUpTransition.setByY(-10);
-//
-//        // Set an event handler to be executed after the translation is finished
-//        moveUpTransition.setOnFinished(event -> {
-//            // Second, add the scale transition to reset the scale
-//            ScaleTransition flipTransition = new ScaleTransition(Duration.seconds(0.3), cartoonCharacter);
-//            flipTransition.setToY(1); // Reset the scale
-//
-//            // Set an event handler to be executed after the flip is finished
-//            flipTransition.setOnFinished(flipEvent -> {
-//                // Update the character state
-//                characterFlippedUp = 1;
-//            });
-//
-//            // Play the flip transition
-//            flipTransition.play();
-//        });
 
-    // Add the move up transition to the sequence
-//        sequentialTransition.getChildren().add(moveUpTransition);
-//
-//        // Play the entire sequence
-//        sequentialTransition.play();
-//    }
 
+
+    public int getCharacterFlippedUp() {
+        return characterFlippedUp;
+    }
+
+    public void setCharacterFlippedUp(int characterFlippedUp) {
+        this.characterFlippedUp = characterFlippedUp;
+    }
 
     private void flipCharacterUp() {
 //        System.out.println("up");
@@ -504,49 +748,16 @@ public class StickHeroController {
         cartoonCharacter.setLayoutY(295);
         characterFlippedUp = 1;
     }
-//private void flipCharacterDown() {
-//    // Code to flip the character down
-//    TranslateTransition flipDownTransition = new TranslateTransition(Duration.seconds(0.5), cartoonCharacter);
-//    flipDownTransition.setToY(stick.getHeight());
-//    flipDownTransition.setCycleCount(1);
-//    flipDownTransition.play();
-//
-//    // Update the character state
-//    characterFlippedUp = 2;
-//}
-//
-//    private void flipCharacterUp() {
-//        // Code to flip the character up
-//        TranslateTransition flipUpTransition = new TranslateTransition(Duration.seconds(0.5), cartoonCharacter);
-//        flipUpTransition.setToY(0);
-//        flipUpTransition.setCycleCount(1);
-//        flipUpTransition.play();
-//
-//        // Update the character state
-//        characterFlippedUp = 1;
-//    }
 
-//    private void flipCharacterDown() {
-//        // Code to flip the character down
-//        RotateTransition flipDownTransition = new RotateTransition(Duration.seconds(0.5), cartoonCharacter);
-//        flipDownTransition.setByAngle(180);
-//        flipDownTransition.setCycleCount(1);
-//        flipDownTransition.play();
-//
-//        // Update the character state
-//        characterFlippedUp = 2;
-//    }
-//
-//    private void flipCharacterUp() {
-//        // Code to flip the character up
-//        RotateTransition flipUpTransition = new RotateTransition(Duration.seconds(0.5), cartoonCharacter);
-//        flipUpTransition.setByAngle(180);
-//        flipUpTransition.setCycleCount(1);
-//        flipUpTransition.play();
-//
-//        // Update the character state
-//        characterFlippedUp = 1;
-//    }
+    public int getCherryCount() {
+        return cherriesDisappearedCount;
+    }
+
+    public int getScore() {
+        return currscore;
+    }
+
+
 
 
 
